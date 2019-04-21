@@ -23,6 +23,7 @@ app.use(express.static('public'));
 app.use((req, res, next) => {
      const fecha = new Date();
      res.locals.year = fecha.getFullYear();
+     next();
 });
 
 //Routing
